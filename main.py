@@ -35,8 +35,7 @@ enemyX_change = []
 enemyY_change = []
 num_of_enemies = 1
 
-# speed
-speed = 3
+
 
 for i in range(num_of_enemies):
     enemyImg.append(pygame.image.load('enemy.png'))
@@ -56,8 +55,13 @@ def create_new_enemy():
     num_of_enemies+=1
 # limit max enemies
 spawn_state = 1;
-grow_limit = 3;
-
+######################################################## DIFFICULTY SETTINGS #########################################
+grow_limit = 20;
+# speed
+speed = 3
+#bullet speed
+bulletY_change = 10
+######################################################################################################################
 # Bullet
 
 # Ready - You can't see the bullet on the screen
@@ -67,7 +71,7 @@ bulletImg = pygame.image.load('blast.png')
 bulletX = 0
 bulletY = 480
 bulletX_change = 0
-bulletY_change = 10
+
 bullet_state = "ready"
 
 # Score
